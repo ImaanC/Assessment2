@@ -1,0 +1,49 @@
+CREATE SCHEMA `college` ;
+
+
+CREATE TABLE `college`.`student` (
+  `ID` INT NOT NULL,
+  `Firstname` VARCHAR(45) NULL,
+  `Surname` VARCHAR(45) NULL,
+  `Algebra` INT NULL,
+  `Calculus` INT NULL,
+  `Programming` INT NULL,
+  `Databases` INT NULL,
+  PRIMARY KEY (`ID`));
+
+
+INSERT INTO `college`.`student` (`ID`, `Firstname`, `Surname`, `Algebra`, `Calculus`, `Programming`, `Databases`) VALUES ('1', 'Joe', 'Soap', '92', '78', '65', '67');
+INSERT INTO `college`.`student` (`ID`, `Firstname`, `Surname`, `Algebra`, `Calculus`, `Programming`, `Databases`) VALUES ('2', 'Jane', 'Doe', '81', '79', '83 ', '89');
+INSERT INTO `college`.`student` (`ID`, `Firstname`, `Surname`, `Algebra`, `Calculus`, `Programming`, `Databases`) VALUES ('3', 'Mary', 'Poppins', '63', '52', '65', '71');
+INSERT INTO `college`.`student` (`ID`, `Firstname`, `Surname`, `Algebra`, `Calculus`, `Programming`, `Databases`) VALUES ('4', 'Mario', 'Rossi', '23', '42', '50', '44');
+INSERT INTO `college`.`student` (`ID`, `Firstname`, `Surname`, `Algebra`, `Calculus`, `Programming`, `Databases`) VALUES ('5', 'John', 'Smith', '56', '67', '72', '72');
+INSERT INTO `college`.`student` (`ID`, `Firstname`, `Surname`, `Algebra`, `Calculus`, `Programming`, `Databases`) VALUES ('6', 'Tom', 'Cruz', '81', '62', '53', '59');
+INSERT INTO `college`.`student` (`ID`, `Firstname`, `Surname`, `Algebra`, `Calculus`, `Programming`, `Databases`) VALUES ('7', 'Jim', 'Beglin', '41', '48', '51', '53');
+INSERT INTO `college`.`student` (`ID`, `Firstname`, `Surname`, `Algebra`, `Calculus`, `Programming`, `Databases`) VALUES ('8', 'Peter', 'Shmooks', '55', '55', '66', '58');
+INSERT INTO `college`.`student` (`ID`, `Firstname`, `Surname`, `Algebra`, `Calculus`, `Programming`, `Databases`) VALUES ('9', 'Hans', 'Meier', '57', '87', '95', '64');
+INSERT INTO `college`.`student` (`ID`, `Firstname`, `Surname`, `Algebra`, `Calculus`, `Programming`, `Databases`) VALUES ('10', 'Jackie', 'Brown', '97', '91', '86', '73');
+
+
+CREATE TABLE `college`.`grades` (
+  `ID` INT NOT NULL,
+  `Firstname` VARCHAR(45) NOT NULL,
+  `Surname` VARCHAR(45) NOT NULL,
+  `Average` INT NOT NULL,
+  `Grade` INT NOT NULL,
+  PRIMARY KEY (`ID`));
+  
+  ALTER TABLE `college`.`grades` 
+CHANGE COLUMN `Grade` `Grade` VARCHAR(5) NOT NULL ;
+
+INSERT INTO `college`.`grades` (`ID`, `Firstname`, `Surname`, `Average`, `Grade`) VALUES ('1', 'Joe', 'Soap', '76.0', 'A');
+INSERT INTO `college`.`grades` (`ID`, `Firstname`, `Surname`, `Average`, `Grade`) VALUES ('2', 'Jane', 'Doe', '83.0', 'A');
+INSERT INTO `college`.`grades` (`ID`, `Firstname`, `Surname`, `Average`, `Grade`) VALUES ('3', 'Mary', 'Poppins', '63.0', 'C');
+INSERT INTO `college`.`grades` (`ID`, `Firstname`, `Surname`, `Average`, `Grade`) VALUES ('4', 'Mario', 'Rossi', '40.0', 'E');
+INSERT INTO `college`.`grades` (`ID`, `Firstname`, `Surname`, `Average`, `Grade`) VALUES ('5', 'John', 'Smith', '67.0', 'C');
+INSERT INTO `college`.`grades` (`ID`, `Firstname`, `Surname`, `Average`, `Grade`) VALUES ('6', 'Tom', 'Cruz', '64.0', 'C');
+INSERT INTO `college`.`grades` (`ID`, `Firstname`, `Surname`, `Average`, `Grade`) VALUES ('7', 'Jim', 'Beglin', '48.0', 'E');
+INSERT INTO `college`.`grades` (`ID`, `Firstname`, `Surname`, `Average`, `Grade`) VALUES ('8', 'Peter', 'Shmooks', '58.0', 'D');
+INSERT INTO `college`.`grades` (`ID`, `Firstname`, `Surname`, `Average`, `Grade`) VALUES ('9', 'Hans', 'Meier', '76.0', 'A');
+INSERT INTO `college`.`grades` (`ID`, `Firstname`, `Surname`, `Average`, `Grade`) VALUES ('10', 'Jackie', 'Brown', '87.0', 'A');
+
+
