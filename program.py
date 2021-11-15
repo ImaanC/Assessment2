@@ -16,15 +16,7 @@ db = mysql.connector.connect(
 )
 
 mycursor = db.cursor()
-mycursor.execute("SELECT * FROM grades")
+mycursor.execute("SELECT * FROM students")
 
 for x in mycursor:
     print(x)
-
-
-#df = pd.read_database('college')
-
-#df['Average']=df.mean(axis=1).round(1)
-
-#df['Grade'] = pd.cut(df['Average'], bins=[0 , 39 , 49, 59, 69, 70 ,100 ], labels= ['F','E', 'D', 'C', 'B', 'A'])
-#df.iloc[0:11,[0,1,6,7]]
